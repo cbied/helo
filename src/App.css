@@ -1,6 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
+
+/* Auth */
 
 .row {
   justify-content: center;
@@ -8,6 +15,9 @@
 
 .container {
   height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
 .center {
@@ -17,10 +27,130 @@
 }
 
 .login {
-  border: 1px solid black;
   width: 50vw;
   height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 5px 10px rgba(95, 95, 95, 0.219);
+}
+
+.background {
+background: rgb(255,112,166);
+background: linear-gradient(90deg, rgba(255,112,166,1) 0%, rgba(255,151,112,1) 35%, rgba(255,214,112,1) 100%);
+}
+
+/* Nav */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 8vw;
+  height: 100vh;
+}
+
+.nav img {
+  height: 3rem;
+  width: 3rem;
+  margin: 2rem auto 1rem auto;
+}
+
+#profile-pic {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: white;
+  margin: 2rem auto 1rem auto;
+}
+
+#profile-pic h6 {
+  margin-bottom: 3rem;
+}
+
+.logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Dashboard */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background: #F2F2F2;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  height: 15vh;
+  background: white;
+  margin: 3rem 0 1rem 5vw;
+}
+
+.search {
+  display: flex;
+  flex-basis: 450px;
+  margin-left: 1rem;
+}
+
+.search Input, .search Button {
+  margin-right: 1rem;
+}
+
+.my-post-check {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 70vw;
+  background: white;
+  margin-left: 5vw;
+}
+
+.message-map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info img {
+  width: 6rem;
+  height: 6rem;
+}
+
+
+/* Post */
+.post-dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
 }

@@ -3,6 +3,7 @@ import { Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { connect } from 'react-redux'
 import { handleUpdateUser } from '../redux/loginReducer'
 import DashBoard from './Dashboard'
+import heloLogo from '../assets/helo_logo.png'
 import axios from 'axios'
 
 export class Auth extends Component {
@@ -12,6 +13,14 @@ export class Auth extends Component {
             username: '',
             password: ''
         }
+    }
+
+    componentDidMount() {
+        axios
+            .get('/api/auth/session')
+            .then((user) => {
+                this.props.handleUpdateUser(user.data) 
+        })
     }
 
 
@@ -38,11 +47,13 @@ export class Auth extends Component {
         let { id } = this.props.user
         return (
             !id ? (
-                <div className='container center'>
-                <Row className="login">
+                <div className='container center background'>
+                <Row className="login background">
                     <Col xs={12}>
                         <Row center="xs">
                         <Col xs={4}>
+                        <img src={heloLogo} alt="helo logo"/>
+                        <h1>Helo</h1>
                         <Form>
                             <FormGroup>
                             <Label for="username">Username</Label>
